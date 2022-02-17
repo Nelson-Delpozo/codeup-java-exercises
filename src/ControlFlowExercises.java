@@ -26,6 +26,14 @@ public class ControlFlowExercises {
             b -= 5;
         }while(b >= -10);
 
+        long s = 2;
+        do {
+            System.out.println("s is: " + s);
+            s *= s;
+        }while(s <= 1000000);
+
+
+
 
 
 
