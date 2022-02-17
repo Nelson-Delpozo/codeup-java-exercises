@@ -32,10 +32,21 @@ public class ControlFlowExercises {
             s *= s;
         }while(s <= 1000000);
 
+        for(int p = 5; p <= 15; p += 1) {
+            System.out.println("p is " + p);
+        }
 
+        for(int o = 2; o <= 100; o += 2) {
+            System.out.println("o is " + o);
+        }
 
+        for(int x = 100; x >= -10; x -= 5) {
+            System.out.println("x is " + x);
+        }
 
-
+        for(long w = 2; w < 1000000; w *= w) {
+            System.out.println("w is " + w);
+        }
 
     }
 }
