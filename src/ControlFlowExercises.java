@@ -14,6 +14,20 @@ public class ControlFlowExercises {
             i++;
         }
 
+        int z = 2;
+        do {
+           System.out.println("z is: " + z);
+            z += 2;
+        }while(z <= 100);
+
+        int b = 100;
+        do {
+            System.out.println("b is: " + b);
+            b -= 5;
+        }while(b >= -10);
+
+
+
 
     }
 }
