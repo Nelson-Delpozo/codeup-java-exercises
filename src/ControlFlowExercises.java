@@ -121,22 +121,43 @@ public class ControlFlowExercises {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter an integer: ");
-        String userInput = scanner.nextLine();
-        System.out.println("You entered: --> \"" + userInput + "\" <--");
 
-        String leftAlignFormat = "| %-6s | %-6d | %-6d |%n";
+//        System.out.print("Enter an integer: ");
+//        String userInput = scanner.nextLine();
+//        System.out.println("You entered: --> \"" + userInput + "\" <--");
+//
+//        String leftAlignFormat = "| %-6s | %-7d | %-6d |%n";
+//
+//        System.out.format("+-----------------+-------+%n");
+//        System.out.format("| Number | Squared | Cubed |%n");
+//        System.out.format("+-----------------+-------+%n");
+//        int userInputInt = Integer.parseInt(userInput);
+//        for (int i = 0; i <= userInputInt; i++) {
+//            System.out.format(leftAlignFormat, i, i * i , i * i * i);
+//        }
+//        System.out.format("+-----------------+-------+%n");
 
-        System.out.format("+-----------------+-------+%n");
-        System.out.format("| Number | Squared | Cubed |%n");
-        System.out.format("+-----------------+-------+%n");
-        int userInputInt = Integer.parseInt(userInput);
-        for (int i = 0; i <= userInputInt; i++) {
-            System.out.format(leftAlignFormat, i, i * i , i * i * i);
-        }
-        System.out.format("+-----------------+-------+%n");
 
+        do {
+            System.out.print("Enter an grade(integer): ");
+            String userGrade = scanner.nextLine();
+            System.out.println("You entered: --> \"" + userGrade + "\" <--");
+            int gradeInt = Integer.parseInt(userGrade);
+            if (gradeInt >= 88) {
+                System.out.println("You got an A!");
+            } else if (gradeInt >= 80) {
+                System.out.println("You got a B!");
+            } else if (gradeInt >= 67) {
+                System.out.println("You got a C!");
+            } else if (gradeInt >= 60) {
+                System.out.println("You got a D!");
+            } else {
+                System.out.println("You failed Bruh");
 
+            }
+            System.out.print("Try another grade?[y/N]: ");
+            String confirm = scanner.nextLine();
 
-}
+        } while(true);
+    }
 }
