@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 
 public class ControlFlowExercises {
@@ -23,11 +22,11 @@ public class ControlFlowExercises {
 //
 //        5 6 7 8 9 10 11 12 13 14 15
 
-        int i = 5;
-        while (i <= 15) {
-            System.out.println("i is: " + i);
-            i++;
-        }
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.println("i is: " + i);
+//            i++;
+//        }
 
 //        Do While
 //
@@ -41,42 +40,42 @@ public class ControlFlowExercises {
 //        256
 //        65536
 
-        int z = 2;
-        do {
-            System.out.println("z is: " + z);
-            z += 2;
-        } while (z <= 100);
-
-        int b = 100;
-        do {
-            System.out.println("b is: " + b);
-            b -= 5;
-        } while (b >= -10);
-
-        long s = 2;
-        do {
-            System.out.println("s is: " + s);
-            s *= s;
-        } while (s <= 1000000);
+//        int z = 2;
+//        do {
+//            System.out.println("z is: " + z);
+//            z += 2;
+//        } while (z <= 100);
+//
+//        int b = 100;
+//        do {
+//            System.out.println("b is: " + b);
+//            b -= 5;
+//        } while (b >= -10);
+//
+//        long s = 2;
+//        do {
+//            System.out.println("s is: " + s);
+//            s *= s;
+//        } while (s <= 1000000);
 
 //        For
 //        Refactor the previous two exercises to use a for loop instead.
 
-        for (int p = 5; p <= 15; p += 1) {
-            System.out.println("p is " + p);
-        }
-
-        for (int o = 2; o <= 100; o += 2) {
-            System.out.println("o is " + o);
-        }
-
-        for (int x = 100; x >= -10; x -= 5) {
-            System.out.println("x is " + x);
-        }
-
-        for (long w = 2; w < 1000000; w *= w) {
-            System.out.println("w is " + w);
-        }
+//        for (int p = 5; p <= 15; p += 1) {
+//            System.out.println("p is " + p);
+//        }
+//
+//        for (int o = 2; o <= 100; o += 2) {
+//            System.out.println("o is " + o);
+//        }
+//
+//        for (int x = 100; x >= -10; x -= 5) {
+//            System.out.println("x is " + x);
+//        }
+//
+//        for (long w = 2; w < 1000000; w *= w) {
+//            System.out.println("w is " + w);
+//        }
 
 //        Fizzbuzz
 //
@@ -87,16 +86,16 @@ public class ControlFlowExercises {
 //        For the multiples of five: print “Buzz”.
 //        For numbers which are multiples of both three and five: print “FizzBuzz”.
 
-        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++) {
-            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
-                System.out.println("FizzBuzz");
-
-            } else if (fizzBuzz % 5 == 0) {
-                System.out.println("Buzz");
-            } else if (fizzBuzz % 3 == 0) {
-                System.out.println("Fizz");
-            }else System.out.println(fizzBuzz);
-        }
+//        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++) {
+//            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//
+//            } else if (fizzBuzz % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else if (fizzBuzz % 3 == 0) {
+//                System.out.println("Fizz");
+//            }else System.out.println(fizzBuzz);
+//        }
 
 //        Display a table of powers.
 //
@@ -120,14 +119,22 @@ public class ControlFlowExercises {
 //        4      | 16      | 64
 //        5      | 25      | 125
 
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.print("Enter an integer: ");
-//        String userInput = scanner.nextLine();
-//        System.out.println("You entered: --> \"" + userInput + "\" <--");
-//        rest goes here
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter an integer: ");
+        String userInput = scanner.nextLine();
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
 
+        String leftAlignFormat = "| %-6s | %-6d | %-6d |%n";
+
+        System.out.format("+-----------------+-------+%n");
+        System.out.format("| Number | Squared | Cubed |%n");
+        System.out.format("+-----------------+-------+%n");
+        int userInputInt = Integer.parseInt(userInput);
+        for (int i = 0; i <= userInputInt; i++) {
+            System.out.format(leftAlignFormat, i, i * i , i * i * i);
+        }
+        System.out.format("+-----------------+-------+%n");
 
 
 
