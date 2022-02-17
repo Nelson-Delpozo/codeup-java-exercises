@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
@@ -116,7 +119,12 @@ public class ControlFlowExercises {
 //        4      | 16      | 64
 //        5      | 25      | 125
 
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter an integer: ");
+        String userInput = scanner.nextLine();
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
+//        rest goes here
 
 
 
