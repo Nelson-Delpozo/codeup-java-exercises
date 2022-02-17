@@ -9,46 +9,60 @@ public class ControlFlowExercises {
 //        }
 
         int i = 5;
-        while ( i <= 15){
+        while (i <= 15) {
             System.out.println("i is: " + i);
             i++;
         }
 
         int z = 2;
         do {
-           System.out.println("z is: " + z);
+            System.out.println("z is: " + z);
             z += 2;
-        }while(z <= 100);
+        } while (z <= 100);
 
         int b = 100;
         do {
             System.out.println("b is: " + b);
             b -= 5;
-        }while(b >= -10);
+        } while (b >= -10);
 
         long s = 2;
         do {
             System.out.println("s is: " + s);
             s *= s;
-        }while(s <= 1000000);
+        } while (s <= 1000000);
 
-        for(int p = 5; p <= 15; p += 1) {
+        for (int p = 5; p <= 15; p += 1) {
             System.out.println("p is " + p);
         }
 
-        for(int o = 2; o <= 100; o += 2) {
+        for (int o = 2; o <= 100; o += 2) {
             System.out.println("o is " + o);
         }
 
-        for(int x = 100; x >= -10; x -= 5) {
+        for (int x = 100; x >= -10; x -= 5) {
             System.out.println("x is " + x);
         }
 
-        for(long w = 2; w < 1000000; w *= w) {
+        for (long w = 2; w < 1000000; w *= w) {
             System.out.println("w is " + w);
         }
 
+//        FIZZBUZZ
+
+        for (int fizzBuzz = 1; fizzBuzz <= 100; fizzBuzz++) {
+            if (fizzBuzz % 3 == 0 && fizzBuzz % 5 == 0) {
+                System.out.println("FizzBuzz");
+
+            } else if (fizzBuzz % 5 == 0) {
+                System.out.println("Buzz");
+            } else if (fizzBuzz % 3 == 0) {
+                System.out.println("Fizz");
+            }else System.out.println(fizzBuzz);
+        }
+
+
+
+
     }
 }
-
-
