@@ -137,7 +137,7 @@ public class ControlFlowExercises {
 //        }
 //        System.out.format("+-----------------+-------+%n");
 
-
+String confirm;
         do {
             System.out.print("Enter an grade(integer): ");
             String userGrade = scanner.nextLine();
@@ -153,11 +153,10 @@ public class ControlFlowExercises {
                 System.out.println("You got a D!");
             } else {
                 System.out.println("You failed Bruh");
-
             }
             System.out.print("Try another grade?[y/N]: ");
-            String confirm = scanner.nextLine();
-
-        } while(true);
+            confirm = scanner.nextLine();
+        }
+        while(confirm.equals("y"));
     }
 }
