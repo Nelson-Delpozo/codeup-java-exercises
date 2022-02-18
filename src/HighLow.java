@@ -17,7 +17,7 @@ public class HighLow {
         System.out.println(numberToGuess);
 
         do {
-            System.out.print("Pick a number from 1-100: ");
+            System.out.print("Pick a number from 1-100(you have 10 guesses: ");
             guess = Integer.parseInt(scanner.nextLine());
             System.out.println(guess);
 
@@ -38,6 +38,12 @@ public class HighLow {
                 guesses++;
                 System.out.println("Guesses so far: " + guesses);
             }
+
+            if(guesses == 10){
+                System.out.println("You're all out of guesses vato");
+                break;
+            }
+
         }while(guess != numberToGuess);
     }
 }
