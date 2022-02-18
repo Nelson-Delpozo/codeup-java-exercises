@@ -1,14 +1,15 @@
 public class MethodsExercises {
 
     public static void main(String[] args) {
-//        System.out.println(sayHello("Nelson"));
-//        System.out.println(getPower(3,5));
+        System.out.println(sayHello("Nelson"));
+        System.out.println(getPower(3,5));
         System.out.println(addition(5,10));
         System.out.println(subtraction(5,10));
         System.out.println(multiplication(5,10));
         System.out.println(division(5,10));
         System.out.println(modulus(5,10));
         System.out.println(multiplicationWithLoop(5,10));
+        System.out.println(multiplicationWithRecursion(10,67));
 
     }
 
@@ -58,8 +59,15 @@ public class MethodsExercises {
         }return multiple;
     }
 
-
-
-
+    public static long multiplicationWithRecursion(int a, int b){
+        if(a == 0 || b == 0){
+            return 0;
+        }else if(a == 1){
+            return b;
+        }else if(b == 1){
+            return a;
+        }
+        return a + multiplicationWithRecursion(a, b -1);
+    }
 }
 
