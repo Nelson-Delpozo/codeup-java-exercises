@@ -14,9 +14,10 @@ public class MethodsExercises {
 //        System.out.println(modulus(5, 10));
 //        System.out.println(multiplicationWithLoop(5, 10));
 //        System.out.println(multiplicationWithRecursion(10, 67));
-        System.out.println(factorial());
+//        System.out.println(factorial());
 //        System.out.println(factorialWithRecursion());
 //        System.out.println(sayHello());
+        System.out.println(total());
 
     }
 
@@ -105,6 +106,15 @@ public class MethodsExercises {
         String userInput = scanner.nextLine();
         return "Hello, " + userInput;
     }
+
+    public static String total(){
+        System.out.print("Enter a number: ");
+        long a = Integer.parseInt(scanner.nextLine());
+        System.out.print("Enter another number: ");
+        long b = Integer.parseInt(scanner.nextLine());
+        return "Your total is: " + (a + b);
+    }
+
 
 //END OF MAIN CLASS
 }
