@@ -19,7 +19,7 @@ public class MethodsExercises {
 //        System.out.println(sayHello());
 //        System.out.println(total());
 //        factorial();
-        diceRoll();
+//        diceRoll();
 
     }
 
@@ -101,13 +101,13 @@ public class MethodsExercises {
         } while (confirm.equals("y"));
     }
 
-    public static long factorialWithRecursion() {
-        long factor = 1;
-        System.out.print("Enter a number between 1-10: ");
-        int userInput = Integer.parseInt(scanner.nextLine());
-        return factor * userInput;
-
-    }
+//    public static long factorialWithRecursion() {
+//        long factor = 1;
+//        System.out.print("Enter a number between 1-10: ");
+//        int userInput = Integer.parseInt(scanner.nextLine());
+//        factor *= userInput;
+//
+//    }
 
     public static String sayHello() {
         System.out.print("What's your name? ");
