@@ -9,9 +9,10 @@ public class HighLow {
     }
 
 
-
     public static void guessMe() {
         int guess;
+        int guesses = 0;
+
         long numberToGuess = Math.round((java.lang.Math.random() * 100 - 1) + 1);
         System.out.println(numberToGuess);
 
@@ -26,11 +27,16 @@ public class HighLow {
             }
             if (guess == numberToGuess) {
                 System.out.println("You got it!");
-//                break;
+                System.out.println("It took you " + guesses + " guesses");
+
             } else if (guess < numberToGuess) {
                 System.out.println("Higher!");
+                guesses++;
+                System.out.println("Guesses so far: " + guesses);
             } else if(guess > numberToGuess) {
                 System.out.println("Lower!");
+                guesses++;
+                System.out.println("Guesses so far: " + guesses);
             }
         }while(guess != numberToGuess);
     }
