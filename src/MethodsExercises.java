@@ -17,7 +17,8 @@ public class MethodsExercises {
 //        System.out.println(factorial());
 //        System.out.println(factorialWithRecursion());
 //        System.out.println(sayHello());
-        System.out.println(total());
+//        System.out.println(total());
+        factorial();
 
     }
 
@@ -77,8 +78,9 @@ public class MethodsExercises {
         return a + multiplicationWithRecursion(a, b - 1);
     }
 
-    public static long factorial() {
-
+    public static void factorial() {
+        String confirm;
+        do {
             System.out.print("Enter a number between 1-10: ");
             int userInput = Integer.parseInt(scanner.nextLine());
             System.out.println("You entered: " + userInput);
@@ -90,7 +92,12 @@ public class MethodsExercises {
             for (long i = 1; i < userInput; i++) {
                 factored *= (i + 1);
             }
-            return factored;
+            System.out.println(factored);
+
+            System.out.print("Wanna do another factorial?[y/N] ");
+            confirm = scanner.nextLine();
+
+        }while(confirm.equals("y"));
     }
 
     public static long factorialWithRecursion(){
