@@ -18,7 +18,8 @@ public class MethodsExercises {
 //        System.out.println(factorialWithRecursion());
 //        System.out.println(sayHello());
 //        System.out.println(total());
-        factorial();
+//        factorial();
+        diceRoll();
 
     }
 
@@ -97,10 +98,10 @@ public class MethodsExercises {
             System.out.print("Wanna do another factorial?[y/N] ");
             confirm = scanner.nextLine();
 
-        }while(confirm.equals("y"));
+        } while (confirm.equals("y"));
     }
 
-    public static long factorialWithRecursion(){
+    public static long factorialWithRecursion() {
         long factor = 1;
         System.out.print("Enter a number between 1-10: ");
         int userInput = Integer.parseInt(scanner.nextLine());
@@ -108,13 +109,13 @@ public class MethodsExercises {
 
     }
 
-    public static String sayHello(){
+    public static String sayHello() {
         System.out.print("What's your name? ");
         String userInput = scanner.nextLine();
         return "Hello, " + userInput;
     }
 
-    public static String total(){
+    public static String total() {
         System.out.print("Enter a number: ");
         long a = Integer.parseInt(scanner.nextLine());
         System.out.print("Enter another number: ");
@@ -122,6 +123,27 @@ public class MethodsExercises {
         return "Your total is: " + (a + b);
     }
 
+    public static void diceRoll() {
+
+        System.out.print("How many sides on the dice?: ");
+        long a = Integer.parseInt(scanner.nextLine());
+        System.out.println("You said: " + a);
+        System.out.println("Are you ready to roll these bad boys?[y/N]");
+        String answer = scanner.nextLine();
+        if (answer.equals("y")) {
+            double sideOne = Math.round((java.lang.Math.random() * a - 1) + 1);
+            double sideTwo = Math.round((java.lang.Math.random() * a - 1) + 1);
+            System.out.println(sideOne);
+            System.out.println(sideTwo);
+
+            System.out.println("Wanna roll again?[y/N]");
+            String confirm = scanner.nextLine();
+
+            if (confirm.equals("y")) {
+                diceRoll();
+            }
+        }
+    }
 
 //END OF MAIN CLASS
 }
