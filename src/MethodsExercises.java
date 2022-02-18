@@ -1,16 +1,22 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        System.out.println(sayHello("Nelson"));
-        System.out.println(getPower(3, 5));
-        System.out.println(addition(5, 10));
-        System.out.println(subtraction(5, 10));
-        System.out.println(multiplication(5, 10));
-        System.out.println(division(5, 10));
-        System.out.println(modulus(5, 10));
-        System.out.println(multiplicationWithLoop(5, 10));
-        System.out.println(multiplicationWithRecursion(10, 67));
-        System.out.println(factorial(10));
+//        System.out.println(sayHello("Nelson"));
+//        System.out.println(getPower(3, 5));
+//        System.out.println(addition(5, 10));
+//        System.out.println(subtraction(5, 10));
+//        System.out.println(multiplication(5, 10));
+//        System.out.println(division(5, 10));
+//        System.out.println(modulus(5, 10));
+//        System.out.println(multiplicationWithLoop(5, 10));
+//        System.out.println(multiplicationWithRecursion(10, 67));
+//        System.out.println(factorial());
+//        System.out.println(factorialWithRecursion());
+        System.out.println(sayHello());
 
     }
 
@@ -70,12 +76,36 @@ public class MethodsExercises {
         return a + multiplicationWithRecursion(a, b - 1);
     }
 
-    public static long factorial(int a) {
-        long factored = 1;
-        for (long i = 1; i < a; i++) {
-            factored *= (i + 1);
-        }
-        return factored;
+    public static long factorial() {
+
+            System.out.print("Enter a number between 1-10: ");
+            int userInput = Integer.parseInt(scanner.nextLine());
+            System.out.println("You entered: " + userInput);
+            if (userInput > 10 | userInput < 1) {
+                System.out.println("That's not between 1-10");
+                factorial();
+            }
+            long factored = 1;
+            for (long i = 1; i < userInput; i++) {
+                factored *= (i + 1);
+            }
+            return factored;
     }
+
+    public static long factorialWithRecursion(){
+        long factor = 1;
+        System.out.print("Enter a number between 1-10: ");
+        int userInput = Integer.parseInt(scanner.nextLine());
+        return factor * userInput;
+
+    }
+
+    public static String sayHello(){
+        System.out.print("What's your name? ");
+        String userInput = scanner.nextLine();
+        return "Hello, " + userInput;
+    }
+
+//END OF MAIN CLASS
 }
 
