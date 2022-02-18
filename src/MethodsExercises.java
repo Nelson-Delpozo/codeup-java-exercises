@@ -14,9 +14,9 @@ public class MethodsExercises {
 //        System.out.println(modulus(5, 10));
 //        System.out.println(multiplicationWithLoop(5, 10));
 //        System.out.println(multiplicationWithRecursion(10, 67));
-//        System.out.println(factorial());
+        System.out.println(factorial());
 //        System.out.println(factorialWithRecursion());
-        System.out.println(sayHello());
+//        System.out.println(sayHello());
 
     }
 
