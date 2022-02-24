@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ArraysExercises {
 
     public static void main(String[] args) {
@@ -15,9 +13,10 @@ public class ArraysExercises {
 
     }
 
-    public static Person[] addPerson(Person[] people, Person newPerson) {
+    public static void addPerson(Person[] people, Person newPerson) {
         newPerson = new Person("New Guy");
         Person[] newPeople = new Person[people.length + 1];
+
 
     }
 
