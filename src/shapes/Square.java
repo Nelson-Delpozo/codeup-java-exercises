@@ -12,7 +12,7 @@ public class Square extends Rectangle {
     }
 
     public int getPerimeter(){
-        return (super.length * 2) + (super.length * 2);
+        return super.length * 4;
     }
 
 }
