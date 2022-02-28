@@ -8,7 +8,7 @@ public class MoviesApplication {
     public static void main(String[] args) {
 
         Input inputChoice = new Input();
-
+        Movie[] movieArray = MoviesArray.findAll();
 
 do {
     System.out.println("What would you like to do?");
@@ -23,10 +23,7 @@ do {
     int choice = inputChoice.getInt();
     System.out.println("choice = " + choice);
 
-    Movie[] movieArray = MoviesArray.findAll();
 
-//        System.out.println(Arrays.toString(movieArray));
-//        System.out.println(movieArray[0].getTitle() + " -- " + movieArray[0].getCategory());
 
     if (choice == 1) {
 

@@ -25,7 +25,7 @@ public class Movie {
         this.category = category;
     }
 
-    public String toString(){
-        return title + " -- " + category;
-    }
+//    public String toString(){
+//        return title + " -- " + category;
+//    }
 }
