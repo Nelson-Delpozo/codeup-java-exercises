@@ -12,12 +12,11 @@
 //        dedicated-photon
 
 
-
-
-
 public class ServerNameGenerator {
 
+    String[] adjectives = {"happy", "sad", "angry", "delicious", "yucky", "peaceful", "loving", "narcoleptic", "heuristic", "convoluted"};
 
+    String[] nouns = {"car", "train", "bus", "airplane", "boat", "bicycle", "scooter", "skateboard", "helicopter", "cannon"};
 
 
 }
