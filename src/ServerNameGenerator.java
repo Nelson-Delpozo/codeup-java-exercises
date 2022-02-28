@@ -15,22 +15,30 @@
 public class ServerNameGenerator {
 
     public String[] adjectives;
-//            = {"happy", "sad", "angry", "delicious", "yucky", "peaceful", "loving", "narcoleptic", "heuristic", "convoluted"};
     public String[] nouns;
-//        = {"car", "train", "bus", "airplane", "boat", "bicycle", "scooter", "skateboard", "helicopter", "cannon"};
 
 
-//    public String getRandom() {
-//        return String.format("Your server name is: %s-%s", adjectives[(int) Math.floor(Math.random() * 10 + 1)], nouns[(int) Math.floor(Math.random() * 10 + 1)]);
-//    }
+    public ServerNameGenerator() {
+        this.adjectives = new String[]{"happy", "sad", "angry", "delicious", "yucky", "peaceful", "loving", "narcoleptic", "heuristic", "convoluted"};
+        this.nouns = new String[]{"car", "train", "bus", "airplane", "boat", "bicycle", "scooter", "skateboard", "helicopter", "cannon"};
+    }
 
+
+    public String getAdjective() {
+
+        return adjectives[(int) Math.floor(Math.random() * 10 + 1)];
+    }
+
+    public String getNoun() {
+
+        return nouns[(int) Math.floor(Math.random() * 10)];
+    }
 
 
 
     public static void main(String[] args) {
-
-
-
+        ServerNameGenerator serverName = new ServerNameGenerator();
+        System.out.printf("Your server name is: %s-%s",(serverName.getAdjective()), (serverName.getNoun()) );
 
     }
 }
