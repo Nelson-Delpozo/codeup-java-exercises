@@ -2,10 +2,12 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class MoviesApplication {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         Input inputChoice = new Input();
 
@@ -20,6 +22,12 @@ public class MoviesApplication {
 
         int choice = inputChoice.getInt();
         System.out.println("choice = " + choice);
+
+        Movie[] movieArray = MoviesArray.findAll();
+        System.out.println(Arrays.toString(movieArray));
+
+        System.out.println(movieArray[0].getTitle() + " -- " + movieArray[0].getCategory());
+
 
     }
 
