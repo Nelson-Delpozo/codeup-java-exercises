@@ -8,11 +8,11 @@ public class ClassExerciseArrays {
         weatherTypes[2] = "cloudy";
 
         System.out.println(weatherTypes[1]);
-       sumAll();
+        System.out.println("sumAll() = " + sumAll());
     }
 
 
-    public static void sumAll(){
+    public static Integer sumAll(){
         Integer[] nums = new Integer[5];
         int sum = 0;
         nums[0] = 5;
@@ -24,7 +24,9 @@ public class ClassExerciseArrays {
         for (Integer num : nums) {
             sum += num;
         }
-        System.out.println(sum);
+        return sum;
     }
 
+
+//END OF CLASS
 }
