@@ -14,11 +14,23 @@
 
 public class ServerNameGenerator {
 
-    String[] adjectives = {"happy", "sad", "angry", "delicious", "yucky", "peaceful", "loving", "narcoleptic", "heuristic", "convoluted"};
+    public String[] adjectives;
+//            = {"happy", "sad", "angry", "delicious", "yucky", "peaceful", "loving", "narcoleptic", "heuristic", "convoluted"};
+    public String[] nouns;
+//        = {"car", "train", "bus", "airplane", "boat", "bicycle", "scooter", "skateboard", "helicopter", "cannon"};
 
-    String[] nouns = {"car", "train", "bus", "airplane", "boat", "bicycle", "scooter", "skateboard", "helicopter", "cannon"};
+
+//    public String getRandom() {
+//        return String.format("Your server name is: %s-%s", adjectives[(int) Math.floor(Math.random() * 10 + 1)], nouns[(int) Math.floor(Math.random() * 10 + 1)]);
+//    }
 
 
 
 
+    public static void main(String[] args) {
+
+
+
+
+    }
 }
