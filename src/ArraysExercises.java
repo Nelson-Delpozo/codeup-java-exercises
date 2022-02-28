@@ -13,13 +13,6 @@ public class ArraysExercises {
 
     }
 
-//    public static void addPerson(Person[] people, Person newPerson) {
-//        newPerson = new Person("New Guy");
-//        Person[] newPeople = new Person[people.length + 1];
-//
-//
-//    }
-
 
 
 
