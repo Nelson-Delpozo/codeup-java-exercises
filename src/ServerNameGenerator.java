@@ -26,7 +26,7 @@ public class ServerNameGenerator {
 
     public String getAdjective() {
 
-        return adjectives[(int) Math.floor(Math.random() * 10 + 1)];
+        return adjectives[(int) Math.floor(Math.random() * 10)];
     }
 
     public String getNoun() {
