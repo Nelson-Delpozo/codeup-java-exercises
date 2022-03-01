@@ -2,6 +2,8 @@ package movies;
 
 import util.Input;
 
+import java.util.Arrays;
+
 public class MoviesApplication {
 
 
@@ -18,6 +20,7 @@ do {
     System.out.println("3 - view movies in the drama category");
     System.out.println("4 - view movies in the horror category");
     System.out.println("5 - view movies in the sci-fi category");
+    System.out.println("6 - add a movie");
     System.out.print("Enter your choice: ");
 
     int choice = inputChoice.getInt();
@@ -66,6 +69,18 @@ do {
                 System.out.println();
             }
         }
+    }else if (choice == 6){
+        Movie[] newArray = Arrays.copyOf(movieArray, movieArray.length + 1);
+        Input movie = new Input();
+        System.out.println("movie.getMovie() = " + movie.getMovie());
+
+
+        for (Movie value : newArray) {
+            System.out.println(value.getTitle());
+        }
+//        System.out.println(Arrays.toString(newArray));
+
+
     }else if(choice == 0){
         return;
     }
@@ -74,4 +89,13 @@ do {
 
 
     }
+
+
+//    END OF MAIN
+
+
+
+
+
 }
+//END OF CLASS

@@ -51,6 +51,12 @@ public class Input {
     }
 
 
+
+    public String getMovie() {
+        System.out.print("Enter a title, category: ");
+        return this.scanner.nextLine();
+
+    }
 }
 
 
