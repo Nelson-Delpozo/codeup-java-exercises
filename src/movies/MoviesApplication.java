@@ -3,12 +3,21 @@ package movies;
 import util.Input;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class MoviesApplication {
 
 
-    public static void main(String[] args) {
+    String title;
+    String category;
 
+//    public MoviesApplication(String title, String category) {
+//        this.title = title;
+//        this.category = category;
+//    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Input inputChoice = new Input();
         Movie[] movieArray = MoviesArray.findAll();
 
@@ -71,14 +80,19 @@ do {
         }
     }else if (choice == 6){
         Movie[] newArray = Arrays.copyOf(movieArray, movieArray.length + 1);
-        Input movie = new Input();
-        System.out.println("movie.getMovie() = " + movie.getMovie());
+        System.out.print("Enter a title: ");
+        String title = scanner.nextLine();
+        System.out.print("Enter a category: ");
+        String category = scanner.nextLine();
+        Movie newMovie = new Movie(title, category);
 
+        System.out.println(newMovie);
+        newArray[newArray.length - 1] = newMovie;
 
         for (Movie value : newArray) {
-            System.out.println(value.getTitle());
+            System.out.println(value.getTitle() + " -- " + value.getCategory());
         }
-//        System.out.println(Arrays.toString(newArray));
+
 
 
     }else if(choice == 0){
