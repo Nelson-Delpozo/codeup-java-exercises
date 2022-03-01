@@ -13,11 +13,11 @@ public class ClassExerciseArrays {
         System.out.println("sumAll() = " + sumAll());
         System.out.println(Arrays.toString(sumOddAndEven()));
     }
+//END OF MAIN
 
-
-    public static Integer sumAll(){
+    public static int sumAll(){
         Integer[] nums = new Integer[5];
-        int sum = 0;
+        Integer sum = 0;
         nums[0] = 5;
         nums[1] = 10;
         nums[2] = 15;
@@ -31,11 +31,11 @@ public class ClassExerciseArrays {
     }
 
 
-    public static Integer[] sumOddAndEven(){
+    public static int[] sumOddAndEven(){
         Integer[] numbers = new Integer[10];
         int sumOfEvens = 0;
         int sumOfOdds = 0;
-        Integer[] finalArray = new Integer[2];
+        int[] finalArray = new int[2];
         numbers[0] = 1;
         numbers[1] = 2;
         numbers[2] = 3;
