@@ -44,21 +44,33 @@ public class GradesApplication {
             System.out.format("| %s | ", i);
 
         }
-        System.out.println();
-        System.out.print("What student would you like to see more information about? ");
-        String choice = studentChoice.nextLine();
-        System.out.println("choice = " + choice);
 
-        for (String student : students.keySet()) {
-            if (student.equals(choice)) {
-                System.out.format("Name: %s%n ", students.get(student).getName());
-                System.out.format("GitHub username: %s%n", student);
-                System.out.format("Average: %s%n", students.get(student).getGradeAverage());
+        do {
+            System.out.println();
+            System.out.print("What student would you like to see more information about? ");
+            String choice = studentChoice.nextLine();
+            System.out.println("choice = " + choice);
 
-
+            if (!students.containsKey(choice)) {
+                System.out.println("Sorry, no student found with that gh username..");
             }
 
-        }
+            for (String student : students.keySet()) {
 
+
+                if (student.equals(choice)) {
+                    System.out.format("Name: %s%n", students.get(student).getName());
+                    System.out.format("GitHub username: %s%n", student);
+                    System.out.format("Average: %s%n", students.get(student).getGradeAverage());
+                    System.out.println();
+                    System.out.print("Would you like to see info on someone else? [y/N]: ");
+                    String response = studentChoice.nextLine();
+                    if(response.equalsIgnoreCase("n")){
+                        System.out.println("Thanks, and have a great day!");
+                        return;
+                    }
+                }
+            }
+        }while(true);
     }
 }
