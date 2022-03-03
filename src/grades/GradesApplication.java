@@ -2,11 +2,13 @@ package grades;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        Scanner studentChoice = new Scanner(System.in);
         HashMap<String, Student> students = new HashMap<>();
 
         Student bill = new Student("Bill", new ArrayList<>());
@@ -42,6 +44,11 @@ public class GradesApplication {
             System.out.format("| %s | ", i);
 
         }
+        System.out.println();
+        System.out.print("What student would you like to see more information about? ");
+        String choice = studentChoice.nextLine();
+        System.out.println("choice = " + choice);
+
 
 
     }
