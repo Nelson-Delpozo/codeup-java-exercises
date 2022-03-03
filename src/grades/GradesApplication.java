@@ -17,19 +17,19 @@ public class GradesApplication {
         bill.addGrade(90);
 
         Student ted = new Student("Ted", new ArrayList<>());
-        ted.addGrade(50);
-        ted.addGrade(80);
-        ted.addGrade(90);
+        ted.addGrade(59);
+        ted.addGrade(88);
+        ted.addGrade(100);
 
         Student napoleon = new Student("Napoleon", new ArrayList<>());
-        napoleon.addGrade(50);
-        napoleon.addGrade(80);
-        napoleon.addGrade(90);
+        napoleon.addGrade(60);
+        napoleon.addGrade(85);
+        napoleon.addGrade(99);
 
         Student socrates = new Student("Socrates", new ArrayList<>());
-        socrates.addGrade(50);
-        socrates.addGrade(80);
-        socrates.addGrade(90);
+        socrates.addGrade(57);
+        socrates.addGrade(87);
+        socrates.addGrade(93);
 
         students.put("ghBill", bill);
         students.put("ghTed", ted);
@@ -49,9 +49,16 @@ public class GradesApplication {
         String choice = studentChoice.nextLine();
         System.out.println("choice = " + choice);
 
+        for (String student : students.keySet()) {
+            if (student.equals(choice)) {
+                System.out.format("Name: %s%n ", students.get(student).getName());
+                System.out.format("GitHub username: %s%n", student);
+                System.out.format("Average: %s%n", students.get(student).getGradeAverage());
 
+
+            }
+
+        }
 
     }
-
-
 }
