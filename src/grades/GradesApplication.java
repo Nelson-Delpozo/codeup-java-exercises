@@ -61,6 +61,7 @@ public class GradesApplication {
                 if (student.equals(choice)) {
                     System.out.format("Name: %s%n", students.get(student).getName());
                     System.out.format("GitHub username: %s%n", student);
+                    System.out.printf("Grades: %s%n", students.get(student).grades);
                     System.out.format("Average: %s%n", students.get(student).getGradeAverage());
                     System.out.println();
                     System.out.print("Would you like to see info on someone else? [y/N]: ");
