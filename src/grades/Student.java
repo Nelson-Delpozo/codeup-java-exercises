@@ -24,7 +24,13 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage() {
-        return 0;
+        double avg = 0;
+
+        for (Integer grade : grades) {
+            avg += grade;
+        }
+
+        return avg / grades.size();
     }
 
     public static void main(String[] args) {
@@ -34,7 +40,7 @@ public class Student {
         newStudent.addGrade(80);
         newStudent.addGrade(90);
         System.out.println("newStudent = " + newStudent.name + "\ngrades: " + newStudent.grades);
-
+        System.out.println("newStudent.getGradeAverage() = " + newStudent.getGradeAverage());
 
 
     }
