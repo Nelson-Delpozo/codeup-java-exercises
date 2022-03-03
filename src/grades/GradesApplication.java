@@ -34,8 +34,14 @@ public class GradesApplication {
         students.put("ghNapoleon", napoleon);
         students.put("ghSocrates", socrates);
 
+        System.out.println("Welcome!");
+        System.out.println("Here are the github usernames of our students: ");
 
+        for (String i : students.keySet()) {
 
+            System.out.format("| %s | ", i);
+
+        }
 
 
     }
