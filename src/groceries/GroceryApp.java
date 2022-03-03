@@ -21,11 +21,15 @@ public class GroceryApp {
         groceries.add(broccoli);
         groceries.add(soymilk);
 
+        soymilk.setQuantity(10);
+
+        System.out.println("Your grocery list: ");
+
         for (GroceryItem grocery : groceries) {
-            System.out.println(grocery.getItem());
+            System.out.println(grocery.getItem() + " -- " + grocery.getCategory() + " -- " + grocery.getQuantity());
         }
 
-        System.out.println(groceries);
+
 
 
     }
