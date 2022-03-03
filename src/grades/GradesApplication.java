@@ -79,7 +79,7 @@ public class GradesApplication {
 
             for (String student : students.keySet()) {
 
-                if (student.equals(choice)) {
+                if (student.equalsIgnoreCase(choice)) {
                     System.out.format("Name: %s%n", students.get(student).getName());
                     System.out.format("GitHub username: %s%n", student);
                     System.out.printf("Grades: %s%n", students.get(student).grades);
