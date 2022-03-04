@@ -44,16 +44,28 @@ public class Student {
         return attendance;
     }
 
+    public double getAttendanceAverage() {
+        int pCount = 0;
+
+        System.out.println("attendance = " + attendance.get("2022-03-02"));
+
+            return attendance.size();
+    }
+
+
     public static void main(String[] args) {
 
         Student newStudent = new Student("Bob", new ArrayList<>());
         newStudent.addGrade(50);
         newStudent.addGrade(80);
         newStudent.addGrade(90);
-        newStudent.recordAttendance("2022-03-03", "P");
+        newStudent.recordAttendance("2022-03-02", "P");
+        newStudent.recordAttendance("2022-03-03", "A");
+        newStudent.recordAttendance("2022-03-04", "P");
         System.out.println("newStudent = " + newStudent.name + "\ngrades: " + newStudent.grades);
         System.out.println("newStudent.getGradeAverage() = " + newStudent.getGradeAverage());
         System.out.println("newStudent.getAttendance() = " + newStudent.getAttendance());
+        System.out.println("newStudent.getAttendanceAverage() = " + newStudent.getAttendanceAverage());
 
 
     }
