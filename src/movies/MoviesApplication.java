@@ -8,14 +8,6 @@ import java.util.Scanner;
 public class MoviesApplication {
 
 
-//    String title;
-//    String category;
-
-//    public MoviesApplication(String title, String category) {
-//        this.title = title;
-//        this.category = category;
-//    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Input inputChoice = new Input();
