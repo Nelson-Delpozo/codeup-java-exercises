@@ -15,21 +15,33 @@ public class GradesApplication {
         bill.addGrade(50);
         bill.addGrade(80);
         bill.addGrade(90);
+        bill.recordAttendance("2022-03-01", "P");
+        bill.recordAttendance("2022-03-02", "P");
+        bill.recordAttendance("2022-03-03", "A");
 
         Student ted = new Student("Ted", new ArrayList<>());
         ted.addGrade(59);
         ted.addGrade(88);
         ted.addGrade(100);
+        ted.recordAttendance("2022-03-01", "P");
+        ted.recordAttendance("2022-03-02", "P");
+        ted.recordAttendance("2022-03-03", "A");
 
         Student napoleon = new Student("Napoleon", new ArrayList<>());
         napoleon.addGrade(60);
         napoleon.addGrade(85);
         napoleon.addGrade(99);
+        napoleon.recordAttendance("2022-03-01", "P");
+        napoleon.recordAttendance("2022-03-02", "P");
+        napoleon.recordAttendance("2022-03-03", "A");
 
         Student socrates = new Student("Socrates", new ArrayList<>());
         socrates.addGrade(57);
         socrates.addGrade(87);
         socrates.addGrade(93);
+        socrates.recordAttendance("2022-03-01", "P");
+        socrates.recordAttendance("2022-03-02", "P");
+        socrates.recordAttendance("2022-03-03", "A");
 
         students.put("ghBill", bill);
         students.put("ghTed", ted);
@@ -59,6 +71,8 @@ public class GradesApplication {
                     System.out.format("GitHub username: %s%n", student);
                     System.out.printf("Grades: %s%n", students.get(student).grades);
                     System.out.format("Average: %s%n", students.get(student).getGradeAverage());
+                    System.out.println("students.get(student).getAttendance() = " + students.get(student).getAttendance());
+                    System.out.println("students.get(student).getAttendanceAverage() = " + students.get(student).getAttendanceAverage());
                     System.out.println();
 
 
