@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class MoviesApplication {
 
 
-    String title;
-    String category;
+//    String title;
+//    String category;
 
 //    public MoviesApplication(String title, String category) {
 //        this.title = title;
@@ -96,7 +96,8 @@ do {
 
 
     }else if(choice == 0){
-        return;
+//        return;
+        System.exit(0);
     }
 
 }while(true);
