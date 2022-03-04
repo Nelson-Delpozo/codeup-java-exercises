@@ -17,12 +17,10 @@ public class ServerNameGenerator {
     public String[] adjectives;
     public String[] nouns;
 
-
     public ServerNameGenerator() {
         this.adjectives = new String[]{"happy", "sad", "angry", "delicious", "yucky", "peaceful", "loving", "narcoleptic", "heuristic", "convoluted"};
         this.nouns = new String[]{"car", "train", "bus", "airplane", "boat", "bicycle", "scooter", "skateboard", "helicopter", "cannon"};
     }
-
 
     public String getAdjective() {
 
@@ -33,8 +31,6 @@ public class ServerNameGenerator {
 
         return nouns[(int) Math.floor(Math.random() * 10)];
     }
-
-
 
     public static void main(String[] args) {
         ServerNameGenerator serverName = new ServerNameGenerator();
