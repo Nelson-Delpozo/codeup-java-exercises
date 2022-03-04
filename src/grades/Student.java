@@ -8,6 +8,7 @@ public class Student {
     private final String name;
     ArrayList<Integer> grades;
     HashMap<String, String> attendance;
+    private double pCount = 0;
 
     public Student(String name, ArrayList<Integer> grades) {
         this.name = name;
@@ -45,11 +46,13 @@ public class Student {
     }
 
     public double getAttendanceAverage() {
-        int pCount = 0;
 
-        System.out.println("attendance = " + attendance.get("2022-03-02"));
-
-            return attendance.size();
+        attendance.forEach((key, value) -> {
+            if (value.equals("P")){
+                pCount += 1;
+            }
+        });
+        return  attendance.size() / pCount;
     }
 
 
