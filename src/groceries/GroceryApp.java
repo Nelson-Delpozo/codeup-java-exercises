@@ -11,12 +11,12 @@ public class GroceryApp {
         ArrayList<GroceryItem> groceries = new ArrayList<>();
         Scanner groceryScanner = new Scanner(System.in);
 
-        System.out.println("Would you like to create a grocery list?[y/N]: ");
+        System.out.print("Would you like to create a grocery list?[y/N]: ");
         String startNewList = groceryScanner.nextLine();
-//        System.out.println(startNewList);
+
 
         if(startNewList.equals("y")){
-            System.out.println("Would you like to add an item?[y/N]");
+            System.out.print("Would you like to add an item?[y/N]: ");
             String addNewItem = groceryScanner.nextLine();
 
             if (addNewItem.equals("y")){
@@ -27,19 +27,26 @@ public class GroceryApp {
                 System.out.print("How many?: ");
                 int newItemQuantity = groceryScanner.nextInt();
 
-                System.out.printf("Would you like to add this item?: %s --> category: %s --> quantity: %s", newItem, newItemCategory, newItemQuantity);
-                System.out.println();
-            }
+                System.out.printf("Would you like to add this item: %s --> category: %s --> quantity: %s [y/N]? ", newItem, newItemCategory, newItemQuantity);
+                Scanner itemAdder = new Scanner(System.in);
+                String addItem = itemAdder.nextLine();
 
-//            System.out.println(addNewItem);
+                if(addItem.equals("y")){
+                    GroceryItem newItemToAdd = new GroceryItem(newItem, newItemCategory, newItemQuantity);
+                    groceries.add(newItemToAdd);
+
+
+                }else System.exit(0);
+
+            }else System.exit(0);
+
         }else System.exit(0);
 
         GroceryItem tofu = new GroceryItem("tofu", "proteins", 4);
-//        System.out.println(tofu.item + " -- " + tofu.category + " -- " + tofu.quantity);
         GroceryItem beans = new GroceryItem("beans", "proteins", 2);
         GroceryItem broccoli = new GroceryItem("broccoli", "veggies", 2);
         GroceryItem soymilk = new GroceryItem("soymilk", "drinks", 1);
-//        System.out.println("tofu.getCategory() = " + tofu.getCategory());
+
 
         groceries.add(tofu);
         groceries.add(beans);
