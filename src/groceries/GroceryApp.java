@@ -38,7 +38,7 @@ public class GroceryApp {
                 if(addItem.equals("y")){
                     GroceryItem newItemToAdd = new GroceryItem(newItem, newItemCategory, newItemQuantity);
                     groceries.add(newItemToAdd);
-                }else System.exit(0);
+                }
 
                 System.out.print("Would you like to add another item[y/N]? ");
                 String addAnother = itemAdder.nextLine();
@@ -63,11 +63,18 @@ public class GroceryApp {
         groceries.add(soymilk);
 
         soymilk.setQuantity(10);
-
-
-        System.out.println("Your grocery list: ");
-
-        groceries.sort(Comparator.comparing(GroceryItem::getItem));
+        boolean chooseSort = false;
+        do {
+            System.out.print("How would you like to see your list? [1=alpha 2=category]: ");
+            int sort = groceryScanner.nextInt();
+            if (sort == 1) {
+                groceries.sort(Comparator.comparing(GroceryItem::getItem));
+                chooseSort = true;
+            } else if (sort == 2) {
+                groceries.sort(Comparator.comparing(GroceryItem::getCategory));
+                chooseSort = true;
+            }
+        }while(!chooseSort);
 
         for (GroceryItem grocery : groceries) {
             System.out.println(grocery.getItem() + " -- " + grocery.getCategory() + " -- " + grocery.getQuantity());
