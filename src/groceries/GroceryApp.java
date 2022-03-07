@@ -1,6 +1,7 @@
 package groceries;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class GroceryApp {
@@ -55,14 +56,22 @@ public class GroceryApp {
 
         soymilk.setQuantity(10);
 
+
         System.out.println("Your grocery list: ");
+
+
+//        for (GroceryItem grocery : groceries) {
+//            System.out.println(grocery.getItem() + " -- " + grocery.getCategory() + " -- " + grocery.getQuantity());
+//        }
+
+        groceries.sort(Comparator.comparing(GroceryItem::getItem));
 
         for (GroceryItem grocery : groceries) {
             System.out.println(grocery.getItem() + " -- " + grocery.getCategory() + " -- " + grocery.getQuantity());
         }
 
+    }
 
 
 
     }
-}
