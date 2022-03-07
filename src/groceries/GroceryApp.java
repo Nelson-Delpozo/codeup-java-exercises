@@ -11,6 +11,7 @@ public class GroceryApp {
 
         ArrayList<GroceryItem> groceries = new ArrayList<>();
         Scanner groceryScanner = new Scanner(System.in);
+        groceryScanner.useDelimiter(System.lineSeparator());
 
         System.out.print("Would you like to create a grocery list?[y/N]: ");
         String startNewList = groceryScanner.nextLine();
@@ -21,10 +22,12 @@ public class GroceryApp {
             String addNewItem = groceryScanner.nextLine();
 
             if (addNewItem.equals("y")){
+                boolean done = false;
+                do{
                 System.out.print("What item?: ");
-                String newItem = groceryScanner.nextLine();
+                String newItem = groceryScanner.next();
                 System.out.print("What's the category?: ");
-                String newItemCategory = groceryScanner.nextLine();
+                String newItemCategory = groceryScanner.next();
                 System.out.print("How many?: ");
                 int newItemQuantity = groceryScanner.nextInt();
 
@@ -35,9 +38,14 @@ public class GroceryApp {
                 if(addItem.equals("y")){
                     GroceryItem newItemToAdd = new GroceryItem(newItem, newItemCategory, newItemQuantity);
                     groceries.add(newItemToAdd);
-
-
                 }else System.exit(0);
+
+                System.out.print("Would you like to add another item[y/N]? ");
+                String addAnother = itemAdder.nextLine();
+                if(addAnother.equalsIgnoreCase("n")){
+                    done = true;
+                }
+                }while(!done);
 
             }else System.exit(0);
 
@@ -58,11 +66,6 @@ public class GroceryApp {
 
 
         System.out.println("Your grocery list: ");
-
-
-//        for (GroceryItem grocery : groceries) {
-//            System.out.println(grocery.getItem() + " -- " + grocery.getCategory() + " -- " + grocery.getQuantity());
-//        }
 
         groceries.sort(Comparator.comparing(GroceryItem::getItem));
 
