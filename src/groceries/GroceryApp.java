@@ -10,14 +10,15 @@ public class GroceryApp {
     public static void main(String[] args) {
 
 
+        ArrayList<GroceryItem> groceries = new ArrayList<>();
 
 
         boolean endSession = false;
 do {
-    ArrayList<GroceryItem> groceries = new ArrayList<>();
+//    ArrayList<GroceryItem> groceries = new ArrayList<>();
     Scanner groceryScanner = new Scanner(System.in);
     groceryScanner.useDelimiter(System.lineSeparator());
-    System.out.print("Would you like to create a grocery list?[y/N]: ");
+    System.out.print("Would you like to edit/create your grocery list?[y/N]: ");
     String startNewList = groceryScanner.nextLine();
 
 
