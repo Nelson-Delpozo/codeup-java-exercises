@@ -40,7 +40,6 @@ public class Input {
         }
     }
 
-
     public double getDouble(double min, double max) {
         double userInput;
         do {

@@ -19,5 +19,6 @@ public class InputTest {
         System.out.println("That is all");
         System.exit(0);
 
+
     }
 }
