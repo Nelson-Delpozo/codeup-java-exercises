@@ -12,7 +12,11 @@ public class InputTest {
         System.out.print("Enter an Integer: ");
         System.out.println(input.getInt());
         System.out.println("input.getDouble(2.5, 50.5) = " + input.getDouble(2.5, 50.5));
+        System.out.print("Enter a double: ");
         System.out.println(input.getDouble());
+
+        System.out.println("That is all");
+        System.exit(0);
 
     }
 }
