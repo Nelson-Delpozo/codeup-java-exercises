@@ -26,13 +26,18 @@ public class Input {
         do {
             System.out.printf("Enter a number between %s and %s:  ", min, max);
             userInput = this.scanner.nextInt();
+
         } while (userInput <= min && userInput >= max);
         return userInput;
     }
 
     public int getInt() {
 //        System.out.println("Enter an integer: ");
-        return this.scanner.nextInt();
+        try {
+            return Integer.parseInt(getString());
+        }catch (NumberFormatException e){
+            throw new NumberFormatException("Not an integer");
+        }
     }
 
 
@@ -47,7 +52,11 @@ public class Input {
 
     public double getDouble() {
 //        System.out.print("Enter a double: ");
-        return this.scanner.nextDouble();
+        try {
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            throw new NumberFormatException("Not a double");
+        }
     }
 
 
