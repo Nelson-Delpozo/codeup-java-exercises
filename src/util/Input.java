@@ -59,6 +59,18 @@ public class Input {
         }
     }
 
+    public int getBinary(){
+        System.out.print("Enter a binary: ");
+        String userInput = scanner.nextLine();
+       return Integer.parseInt(userInput, 2);
+    }
+
+    public int getHex(){
+        System.out.print("Enter a number: ");
+        String userInput = scanner.nextLine();
+        return (int) Long.parseLong(userInput, 16);
+    }
+
 
 }
 

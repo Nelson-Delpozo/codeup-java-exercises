@@ -14,7 +14,8 @@ public class InputTest {
 //        System.out.println("input.getDouble(2.5, 50.5) = " + input.getDouble(2.5, 50.5));
 //        System.out.print("Enter a double: ");
         System.out.println(input.getDouble());
-
+        System.out.println("input.getBinary = " + input.getBinary());
+        System.out.println("input.getHex = " + input.getHex());
         System.out.println("That is all");
         System.exit(0);
 
