@@ -35,7 +35,7 @@ public class Input {
 //        System.out.println("Enter an integer: ");
         try {
             return Integer.parseInt(getString());
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new NumberFormatException("Not an integer");
         }
     }
@@ -53,18 +53,18 @@ public class Input {
 //        System.out.print("Enter a double: ");
         try {
             return Double.parseDouble(getString());
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new NumberFormatException("Not a double");
         }
     }
 
-    public int getBinary(){
+    public int getBinary() {
         System.out.print("Enter a binary: ");
         String userInput = scanner.nextLine();
-       return Integer.parseInt(userInput, 2);
+        return Integer.parseInt(userInput, 2);
     }
 
-    public int getHex(){
+    public int getHex() {
         System.out.print("Enter a number: ");
         String userInput = scanner.nextLine();
         return (int) Long.parseLong(userInput, 16);
